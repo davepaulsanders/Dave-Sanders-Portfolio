@@ -156,8 +156,13 @@ ul {
 /* Projects Styles Start */
 .projects {
     display: grid;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr)
+    
 }
+
+/* Projects Styles End */
+
+/* NBA Styles Start*/
 
 .nba {
     display: flex;
@@ -201,4 +206,63 @@ ul {
 .nba button:hover {
     cursor: pointer;
 }
-/* Projects Styles End */
+
+/* NBA Styles End */
+
+/* Setlists Styles Start */
+.setlists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-image: linear-gradient(rgba(32,32,32, 0.6), rgba(32,32,32, 0.8)), url("../../assets/setlists.png");
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    flex-basis: 450px;
+    grid-column: 9 / span 4;
+}
+
+.setlists p {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    
+}
+
+.setlists button {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin: .75rem;
+    padding: 1.25rem 4rem;
+    border-radius: 50px;
+    background: #3e4559;
+    border: none;
+}
+.setlists button:hover {
+    cursor: pointer;
+}
+
+/* Setlists Styles End */
+
+@media screen and (max-width: 1240px) {
+    .nba {
+        grid-column: 1 / span 6;
+    }
+    .setlists {
+        grid-column: 7 / span 6;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nba {
+        grid-column: 1 / span 12;
+    }
+    .setlists {
+        grid-column: 1 / span 12;
+    }
+}
