@@ -1,6 +1,7 @@
 * {
-    font-family: Lora, serif;
+   
     --brown: #993c09;
+    --bg-dim: rgba(32,32,32, 0.85)
   }
   
   body {
@@ -10,7 +11,7 @@
     
   }
   body::-webkit-scrollbar {
-    background: transparent;
+    display: none;
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -19,6 +20,7 @@
   
 button {
     font-size: 1.25rem;
+    font-family: Lora, serif;
     font-weight: bold;
     color: white;
     margin: .75rem;
@@ -32,14 +34,31 @@ button:hover {
     cursor: pointer;
     background: #993c09;
 }
-/* Header Styles Start*/
+/* Header Styles */
 
-nav {
+.mobile-nav-header {
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0rem 2rem;
+    margin: 1rem;
+}
+.mobile-nav-header h1 {
+    font-size: 2rem;
+    cursor: pointer;
     
+}
+.mobile-nav-header img {
+    width: 2rem;
+    height: 2rem;
+
+}
+.mobile-nav-header img:hover {
+    cursor: pointer;
+
+}
+.mobile-nav-header a {
+    color: black;
+    text-decoration: none;
 }
 
 nav a {
@@ -47,57 +66,61 @@ nav a {
     color: black;
  }
 
-h1 {
-    font-size: 2rem;
-    cursor: pointer;
-    color: black;
-    
-}
 nav img {
     width: 2rem;
     height: 2rem;
 }
 
+nav .close-icon {
+position: absolute;
+top: 2rem;
+right: 2rem;
+
+}
+
 nav li {
     cursor: pointer;
+    margin: 1rem;
 }
 nav li:hover {
-    color: var(--brown);
+    color: white;
 }
-ul {
-    font-size: 1.25rem;
+nav ul {
     display: none;
-    min-width: 20rem;
-    margin: 1rem;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--brown);
+    position: fixed;
+    height: 100%;
+    font-size: 2rem;
     list-style: none;
+    top: 0;
+    padding: 4rem 0;
+    
 }
-
 
 @media screen and (min-width: 750px) {
-    nav img {
-        display: none;
-    }
-    nav ul {
-        display: flex;
-        justify-content: space-between;
-    }
+    
 }
 
-/* Header Styles End*/
 
 /* Hero Styles Start*/
+
 .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 1.5rem 2rem 1.5rem;
+    margin: 0 1rem 2rem 1rem;
 }
 .hero h2 {
-  text-align: left;  
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 .headshot {
     width: 100%;
-    height: 100%;
     animation: slideAnimationLeft 1s ease-in-out;
 }
 
@@ -111,9 +134,9 @@ ul {
     }
  
     .headshot {
+       width: 40%;
+       height: 500px;
        object-fit: cover;
-        width: 40%;
-        height: 500px;
     }
 
     .hero-action-container{
@@ -178,7 +201,7 @@ ul {
     content: "";
     display: block;
     position: relative;
-    top: 1rem;
+    top: 13rem;
     width: 90%;
     border-bottom: 1px solid #d96e34;
 }
@@ -193,17 +216,25 @@ ul {
     color: white;
     width: 90%;
     text-align: left;
-    max-width: 50rem;
+    max-width: 70rem;
 }
 
 /* Bio Styles End */
 
 /* Projects Styles Start */
+
 .projects {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0.05rem;
-    margin: 0 0.05rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 1300px) {
+    .projects {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 .project-example {
     display: flex;
@@ -227,7 +258,7 @@ ul {
 /* NBA Styles Start*/
 
 .nba {
-    background-image: linear-gradient(rgba(32,32,32, 0.85), rgba(32,32,32, 0.85)), url("../../assets/nba-screenshot.png");
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("../../assets/nba-screenshot.png");
     grid-column: 1 / span 12;
 
 }
@@ -244,7 +275,7 @@ ul {
 /* Setlists Styles Start */
 
 .setlists {
-    background-image: linear-gradient(rgba(32,32,32, 0.85), rgba(32,32,32, 0.85)), url("../../assets/setlists.png");
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("../../assets/setlists.png");
     grid-column: 1 / span 12;
 }
 
@@ -253,7 +284,7 @@ ul {
 /* Run Buddy Styles Start */
 
 .run-buddy {
-    background-image: linear-gradient(rgba(32,32,32, 0.85), rgba(32,32,32, 0.85)), url("../../assets/runbuddy.png");
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("../../assets/runbuddy.png");
     grid-column: 1 / span 12;
 }
 

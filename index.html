@@ -12,15 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/reset.css">
 <link rel="stylesheet" href="./assets/styles.css"> 
 <title>Dave Sanders</title>
+</head>
  <body>
+     <header>
+         <div class="mobile-nav-header">
+        <a href="/">
+            <h1>Dave Sanders</h1>
+          </a>
+          <img src="./assets/hamburger.png" id="hamburger"></img>
+        </div>
     <nav>
-      <a href="/">
-        <h1>Dave Sanders</h1>
-      </a>
-      <img src="./assets/hamburger.png"></img>
-      <ul>
+      <ul id="drop-down">
+        <img class="close-icon" id="close-icon" src="./assets/close.png" alt="">
         <a href="#bio">
           <li>About</li>
         </a>
@@ -30,6 +36,8 @@
         <li>Contact</li>
       </ul>
     </nav>
+    
+</header>
     <section class="hero">
         <img class="headshot" src="./assets/headshot.jpeg" alt="Dave Sanders" />
         <div class="hero-action-container">
@@ -59,22 +67,23 @@
           guitar and music theory (Towson University, Rutgers University)
         </p>
       </section>
+      <div class="grid-container">
       <section class="projects" id="projects">
           <article class="project-example nba">
             <p class="project-details">
                 <span>Check out</span> the app I designed to help follow the NBA season
-              </p>
-              <a href="https://nba-games.netlify.app/">
-                <button>Visit</button>
-              </a>
+            </p>
+            <a href="https://nba-games.netlify.app/">
+              <button>Visit</button>
+            </a>
             </article>
           <article class=" project-example setlists">
             <p class="project-details">
                 Setlists allows a user to build setlists and save them to their account!
-              </p>
-              <a href="https://github.com/davepaulsanders/setlists">
-                <button>Repo</button>
-              </a>
+            </p>
+            <a href="https://github.com/davepaulsanders/setlists">
+              <button>Repo</button>
+            </a>
             </article>
           <article class="project-example run-buddy">
             <p class="project-details">A page to find a trainer!</p>
@@ -83,8 +92,7 @@
             </a>
         </article>
       </section>
-  </head>
-  <body>
-    
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
