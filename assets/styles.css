@@ -1,6 +1,6 @@
 * {
     font-family: Lora, serif;
-    
+    --brown: #993c09;
   }
   
   body {
@@ -17,7 +17,21 @@
       monospace;
   }
   
+button {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin: .75rem;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    background: #3e4559;
+    border: none;
+}
 
+button:hover {
+    cursor: pointer;
+    background: #993c09;
+}
 /* Header Styles Start*/
 
 nav {
@@ -32,6 +46,7 @@ nav a {
     text-decoration: none;
     color: black;
  }
+
 h1 {
     font-size: 2rem;
     cursor: pointer;
@@ -45,6 +60,9 @@ nav img {
 
 nav li {
     cursor: pointer;
+}
+nav li:hover {
+    color: var(--brown);
 }
 ul {
     font-size: 1.25rem;
@@ -80,11 +98,7 @@ ul {
 .headshot {
     width: 100%;
     height: 100%;
-    
     animation: slideAnimationLeft 1s ease-in-out;
-}
-.hero-button-container button:hover {
-    cursor: pointer;
 }
 
 @media screen and (min-width: 600px) {
@@ -118,17 +132,6 @@ ul {
     display: flex;
 }
 
-.hero button {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: white;
-    margin: 0.5rem;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    background: #3e4559;
-    border: none;
-}
-
 @keyframes slideAnimationRight {
     0% {
       transform: translateX(5%);
@@ -151,32 +154,82 @@ ul {
     }
   }
 
-/* Header Styles End*/
+/* Hero Styles End*/
+
+/* Bio Styles Start */
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+    background: var(--brown);
+    align-items: center;
+
+}
+.bio p:first-child:first-letter {
+    color: #3e4559;
+   font-size: 5rem;
+   padding-right: 1px;
+   float: left;
+   line-height: 5rem;
+}
+.bio > p::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 1rem;
+    width: 90%;
+    border-bottom: 1px solid #d96e34;
+}
+
+.bio > p:last-child::after {
+    border: none;
+}
+
+.bio p {
+    font-size: 1.25rem;
+    line-height: 2;
+    color: white;
+    width: 90%;
+    text-align: left;
+    max-width: 50rem;
+}
+
+/* Bio Styles End */
 
 /* Projects Styles Start */
 .projects {
     display: grid;
-    grid-template-columns: repeat(12, 1fr)
-    
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0.05rem;
+    margin: 0 0.05rem;
 }
-
-/* Projects Styles End */
-
-/* NBA Styles Start*/
-
-.nba {
+.project-example {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 4rem 0;
-    background-image: linear-gradient(rgba(32,32,32, 0.6), rgba(32,32,32, 0.8)), url("../../assets/nba-screenshot.png");
-    background-position:center;
+    background-position:top;
     background-size: cover;
     background-repeat: no-repeat;
-    flex-basis: 600px;
-    flex-grow: 12;
-    grid-column: 1 / span 8;
+}
+
+.project-details {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+/* Projects Styles End */
+
+/* NBA Styles Start*/
+
+.nba {
+    background-image: linear-gradient(rgba(32,32,32, 0.85), rgba(32,32,32, 0.85)), url("../../assets/nba-screenshot.png");
+    grid-column: 1 / span 12;
+
 }
 
 .nba span {
@@ -185,84 +238,45 @@ ul {
     font-size: 1.75rem;
     padding-right: 0.5rem;
 }
-.nba p {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    color: white;
-}
-
-.nba button {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: white;
-    margin: .75rem;
-    padding: 1.25rem 4rem;
-    border-radius: 50px;
-    background: #3e4559;
-    border: none;
-}
-
-.nba button:hover {
-    cursor: pointer;
-}
 
 /* NBA Styles End */
 
 /* Setlists Styles Start */
+
 .setlists {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 0;
-    background-image: linear-gradient(rgba(32,32,32, 0.6), rgba(32,32,32, 0.8)), url("../../assets/setlists.png");
-    background-position:top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    flex-grow: 1;
-    flex-basis: 450px;
-    grid-column: 9 / span 4;
-}
-
-.setlists p {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 1rem;
-    color: white;
-    
-}
-
-.setlists button {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: white;
-    margin: .75rem;
-    padding: 1.25rem 4rem;
-    border-radius: 50px;
-    background: #3e4559;
-    border: none;
-}
-.setlists button:hover {
-    cursor: pointer;
+    background-image: linear-gradient(rgba(32,32,32, 0.85), rgba(32,32,32, 0.85)), url("../../assets/setlists.png");
+    grid-column: 1 / span 12;
 }
 
 /* Setlists Styles End */
 
-@media screen and (max-width: 1240px) {
+/* Run Buddy Styles Start */
+
+.run-buddy {
+    background-image: linear-gradient(rgba(32,32,32, 0.85), rgba(32,32,32, 0.85)), url("../../assets/runbuddy.png");
+    grid-column: 1 / span 12;
+}
+
+/* Run Buddy Styles End */
+
+/* Media Queries */
+
+@media screen and (min-width: 800px) {
     .nba {
         grid-column: 1 / span 6;
     }
     .setlists {
         grid-column: 7 / span 6;
     }
-}
-
-@media screen and (max-width: 800px) {
-    .nba {
+    .run-buddy {
         grid-column: 1 / span 12;
     }
+}
+@media screen and (min-width: 1000px) {
+    .nba {
+        grid-column: 1 / span 8;
+    }
     .setlists {
-        grid-column: 1 / span 12;
+        grid-column: 9 / span 4;
     }
 }
