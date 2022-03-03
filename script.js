@@ -27,8 +27,12 @@ menuItems.forEach((item) => {
   });
 });
 
+// Drop down menu closes if window is resized while mobile nav is open
+
 window.addEventListener("resize", function () {
   if (window.innerWidth > 800) {
     mobileDropDownNav.style.display = "flex";
+  } else {
+    mobileDropDownNav.style.display = "none";
   }
 });
