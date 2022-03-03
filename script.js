@@ -2,9 +2,8 @@ const hamburgerIcon = document.getElementById("hamburger");
 const mobileDropDownNav = document.getElementById("drop-down");
 const closeIcon = document.getElementById("close-icon");
 const about = document.getElementById("about");
-const projects = document.getElementById("projects");
-const contact = document.getElementById("contact");
-
+const projects = document.getElementById("projects-menu");
+const contact = document.getElementById("contact-menu");
 const menuItems = [about, projects, contact];
 
 // Adding animations and click functionality for drop down nav
@@ -22,6 +21,14 @@ closeIcon.addEventListener("click", function () {
 
 menuItems.forEach((item) => {
   item.addEventListener("click", function () {
-    mobileDropDownNav.style.display = "none";
+    if (window.innerWidth < 800) {
+      mobileDropDownNav.style.display = "none";
+    }
   });
+});
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 800) {
+    mobileDropDownNav.style.display = "flex";
+  }
 });

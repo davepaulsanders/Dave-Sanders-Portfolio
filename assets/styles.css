@@ -44,6 +44,7 @@ button:hover {
 }
 .mobile-nav-header h1 {
     font-size: 2rem;
+    
     cursor: pointer;
     
 }
@@ -348,3 +349,21 @@ nav ul {
     }
     
 }
+
+/* Footer Style Start */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    height: 100px;
+    font-size: 1rem;
+    background: var(--brown);
+    color: white;
+}
+
+footer > * {
+   margin: 1rem;
+   text-decoration: none;
+}
+/* Footer Style End */
