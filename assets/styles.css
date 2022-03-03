@@ -34,7 +34,7 @@ button:hover {
     cursor: pointer;
     background: #993c09;
 }
-/* Header Styles */
+/* Header Styles Start*/
 
 .mobile-nav-header {
     padding: 1rem;
@@ -60,6 +60,9 @@ button:hover {
     color: black;
     text-decoration: none;
 }
+/* Header Styles End */
+
+/* Nav Styles Start */
 
 nav a {
     text-decoration: none;
@@ -98,20 +101,59 @@ nav ul {
     list-style: none;
     top: 0;
     padding: 4rem 0;
-    
-}
 
-@media screen and (min-width: 750px) {
-    
 }
+@keyframes dissolveInFromTop {
+    0% {
+      transform: translateY(-5%);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
+@media screen and (min-width: 800px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    nav ul {
+       display: flex;
+       flex-direction: row;
+       position: relative;
+       height: auto;
+       padding: 1rem 0;
+       justify-content: space-around;
+       width: 100%;
+       background: none;
+       font-size: 1.5rem;
+    }
+
+    nav ul li {
+        padding: 0 1.5rem;
+        
+    }
+    nav ul li:hover {
+        color: var(--brown)
+    }
+    .hamburger-icon {
+        display: none;
+    }
+    .close-icon {
+        display: none;
+    }
+}
+/* Nav Styles End */
 
 /* Hero Styles Start*/
 
 .hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin: 0 1rem 2rem 1rem;
 }
 .hero h2 {
@@ -219,6 +261,7 @@ nav ul {
     max-width: 70rem;
 }
 
+
 /* Bio Styles End */
 
 /* Projects Styles Start */
@@ -230,12 +273,6 @@ nav ul {
     width: 100%;
 }
 
-@media screen and (min-width: 1300px) {
-    .projects {
-        width: 80%;
-        margin: 0 auto;
-    }
-}
 .project-example {
     display: flex;
     flex-direction: column;
@@ -290,24 +327,24 @@ nav ul {
 
 /* Run Buddy Styles End */
 
-/* Media Queries */
+/* Media Queries for Projects */
+
 
 @media screen and (min-width: 800px) {
     .nba {
-        grid-column: 1 / span 6;
+        grid-column: 1 / span 7;
     }
     .setlists {
-        grid-column: 7 / span 6;
+        grid-column: 8 / span 5;
     }
     .run-buddy {
         grid-column: 1 / span 12;
     }
 }
+
 @media screen and (min-width: 1000px) {
-    .nba {
-        grid-column: 1 / span 8;
+    .project-example {
+        height: 400px;
     }
-    .setlists {
-        grid-column: 9 / span 4;
-    }
+    
 }
