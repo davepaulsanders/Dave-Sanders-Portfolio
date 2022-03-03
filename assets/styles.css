@@ -297,7 +297,7 @@ nav ul {
 /* NBA Styles Start*/
 
 .nba {
-    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("../../assets/nba-screenshot.png");
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("./nba-screenshot.png");
     grid-column: 1 / span 12;
 
 }
@@ -314,7 +314,7 @@ nav ul {
 /* Setlists Styles Start */
 
 .setlists {
-    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("../../assets/setlists.png");
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("./setlists.png");
     grid-column: 1 / span 12;
 }
 
@@ -323,7 +323,7 @@ nav ul {
 /* Run Buddy Styles Start */
 
 .run-buddy {
-    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("../../assets/runbuddy.png");
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("./runbuddy.png");
     grid-column: 1 / span 12;
 }
 
