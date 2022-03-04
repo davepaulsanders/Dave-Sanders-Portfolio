@@ -137,7 +137,7 @@ nav ul {
 
     nav ul li {
         padding: 0 1.5rem;
-        
+        color: black;
     }
     nav ul li:hover {
         color: var(--brown)
