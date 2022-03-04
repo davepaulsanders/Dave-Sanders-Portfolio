@@ -85,9 +85,10 @@ right: 2rem;
 nav li {
     cursor: pointer;
     margin: 1rem;
+    color: white;
 }
 nav li:hover {
-    color: white;
+    color: #d96e34;
 }
 nav ul {
     display: none;
@@ -271,7 +272,7 @@ nav ul {
 .projects {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 0.05rem;
+    grid-gap: 1px;
     width: 100%;
 }
 
@@ -284,6 +285,7 @@ nav ul {
     background-position:top;
     background-size: cover;
     background-repeat: no-repeat;
+    grid-column: 1 / span 12;
 }
 
 .project-details {
@@ -297,8 +299,7 @@ nav ul {
 /* NBA Styles Start*/
 
 .nba {
-    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("./nba-screenshot.png");
-    grid-column: 1 / span 12;
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/nba-screenshot.png");
 
 }
 
@@ -314,8 +315,7 @@ nav ul {
 /* Setlists Styles Start */
 
 .setlists {
-    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("./setlists.png");
-    grid-column: 1 / span 12;
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/setlists.png");
 }
 
 /* Setlists Styles End */
@@ -323,10 +323,12 @@ nav ul {
 /* Run Buddy Styles Start */
 
 .run-buddy {
-    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("./runbuddy.png");
-    grid-column: 1 / span 12;
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/runbuddy.png");
 }
 
+.horiseon {
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/horiseon.png");
+}
 /* Run Buddy Styles End */
 
 /* Media Queries for Projects */
@@ -334,13 +336,13 @@ nav ul {
 
 @media screen and (min-width: 800px) {
     .nba {
-        grid-column: 1 / span 7;
+        grid-column: 1 / span 12;
     }
     .setlists {
-        grid-column: 8 / span 5;
+        grid-column: 1 / span 6;
     }
     .run-buddy {
-        grid-column: 1 / span 12;
+        grid-column: 7 / span 6;
     }
 }
 
@@ -348,7 +350,15 @@ nav ul {
     .project-example {
         height: 400px;
     }
-    
+    .setlists {
+        grid-column: 1 / span 4;
+    }
+    .run-buddy {
+        grid-column: 5 / span 4;
+    }
+    .horiseon {
+        grid-column: 9 / span 4; 
+    }
 }
 
 /* Footer Style Start */

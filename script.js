@@ -15,6 +15,7 @@ hamburgerIcon.addEventListener("click", function () {
 });
 closeIcon.addEventListener("click", function () {
   mobileDropDownNav.style.display = "none";
+  mobileDropDownNav.style.animation = "none";
 });
 
 // Adding click functionality to make mobile nav disappear when link is clicked
