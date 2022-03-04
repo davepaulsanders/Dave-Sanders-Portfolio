@@ -162,6 +162,7 @@ nav ul {
   text-align: center;
   font-size: 1.5rem;
   margin: 1.5rem;
+  line-height: 1.5;
 }
 .headshot {
     width: 100%;
@@ -237,9 +238,9 @@ nav ul {
 .bio p:first-child:first-letter {
     color: #3e4559;
    font-size: 5rem;
-   padding-right: 15px;
+   padding-right: 10px;
    float: left;
-   line-height: 5rem;
+   line-height: 6rem;
 }
 .bio > p::after {
     content: "";
