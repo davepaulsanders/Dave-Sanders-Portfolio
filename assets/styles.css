@@ -290,6 +290,7 @@ nav ul {
 
 .project-details {
     font-size: 1.5rem;
+    line-height: 1.5;
     text-align: center;
     padding: 1rem;
     color: white;
