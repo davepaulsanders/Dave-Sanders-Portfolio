@@ -300,7 +300,7 @@ nav ul {
 
 /* City Explorer Styles Start */
 .city-explorer {
-    background-image: url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/city-explorer.png")
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/city-explorer.png")
 
 }
 
