@@ -32,7 +32,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    background: #993c09;
+    background: rgb(204, 44, 16);
 }
 /* Header Styles Start*/
 
@@ -240,6 +240,9 @@ nav ul {
 .projects {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    margin: 0 auto;
+    width: 95%;
+    grid-gap: 0.25rem;
 }
 
 .project-example {
@@ -317,6 +320,33 @@ nav ul {
 
 /* Media Queries for Projects */
 
+@media only screen and (min-width: 850px) {
+    .projects {
+        width: 75%;
+    }
+    .setlists {
+        grid-column: 1 / span 4;
+    }
+    .run-buddy {
+        grid-column: 5 / span 4;
+    }
+    .horiseon {
+        grid-column: 9 / span 4;
+    }
+    .nba {
+        grid-column: 7 / span 6;
+    }
+    .city-explorer {
+        grid-column: 1 / span 6;
+    }
+
+}
+@media only screen and (min-width: 1000px) {
+    .projects {
+        width: 50%;
+    }
+
+}
 /* Footer Style Start */
 footer {
     display: flex;
