@@ -1,14 +1,14 @@
 * {
    
-    --brown: #993c09;
-    --bg-dim: rgba(32,32,32, 0.85)
+    --brown: #fdc1a0;
+    --bg-dim: rgba(32,32,32, 0.65)
   }
   
   body {
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
+    background-color: var(--brown);
   }
   body::-webkit-scrollbar {
     display: none;
@@ -19,13 +19,13 @@
   }
   
 button {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-family: Lora, serif;
     font-weight: bold;
     color: white;
     margin: .75rem;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 7px;
     background: #3e4559;
     border: none;
 }
@@ -132,7 +132,7 @@ nav ul {
        justify-content: space-around;
        width: 100%;
        background: none;
-       font-size: 1.5rem;
+       font-size: 1.25rem;
     }
 
     nav ul li {
@@ -152,40 +152,22 @@ nav ul {
 /* Nav Styles End */
 
 /* Hero Styles Start*/
-
 .hero {
+    height: 22rem;
     display: flex;
-    flex-direction: column;
-    margin: 0 1rem 2rem 1rem;
+    justify-content: center;
+    align-items: center;
 }
 .hero h2 {
   text-align: center;
-  font-size: 1.5rem;
-  margin: 1.5rem;
-  line-height: 1.5;
-}
-.headshot {
-    width: 100%;
-    animation: slideAnimationLeft 1s ease-in-out;
+  font-size: 4rem;
+  width: 75%;
+  margin: 2rem 0;
 }
 
-@media screen and (min-width: 600px) {
-    .hero {
-        flex-direction: row;
-        justify-content: space-around;
-    }
+@media only screen and (max-width: 650px) {
     .hero h2 {
-        line-height: 1.5;
-    }
- 
-    .headshot {
-       width: 40%;
-       height: 500px;
-       object-fit: cover;
-    }
-
-    .hero-action-container{
-      width: 50%;
+        font-size: 3rem;
     }
 }
 
@@ -195,9 +177,6 @@ nav ul {
     justify-content: center;
     align-items: center;
     animation: slideAnimationRight 1s ease-in-out;
-}
-.hero-button-container {
-    display: flex;
 }
 
 @keyframes slideAnimationRight {
@@ -227,44 +206,33 @@ nav ul {
 /* Bio Styles Start */
 
 .bio {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    padding: 2rem 0;
-    background: var(--brown);
+    min-height: 20rem;
+    display: flex;
+    justify-content: center;
     align-items: center;
-
 }
 .bio p:first-child:first-letter {
-    color: #3e4559;
+   color: #3e4559;
    font-size: 5rem;
    padding-right: 10px;
    float: left;
-   line-height: 6rem;
+   line-height: 5rem;
 }
-.bio > p::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 90%;
-    left: 12%;
-    height: 80%;
-    top: 20px;
-    border-right: 1px solid #d96e34;
-}
-
 
 .bio p {
-    font-size: 1.25rem;
-    line-height: 2.5;
-    color: white;
-    width: 90%;
+    margin: 0 1rem;
+    font-size: 1rem;
+    line-height: 2rem;
     text-align: left;
-    max-width: 60rem;
-    position: relative;
+    max-width: 35rem;
 }
 
-
+@media only screen and (max-width: 650px) {
+    .bio p {
+        margin: 2rem 1rem;
+    }
+}
 /* Bio Styles End */
 
 /* Projects Styles Start */
@@ -272,8 +240,6 @@ nav ul {
 .projects {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-gap: 1px;
-    width: 100%;
 }
 
 .project-example {
@@ -289,7 +255,7 @@ nav ul {
 }
 
 .project-details {
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.5;
     text-align: center;
     padding: 1rem;
@@ -317,7 +283,7 @@ nav ul {
 .nba span {
     font-style: italic;
     font-weight: bold;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     padding-right: 0.5rem;
 }
 
@@ -341,36 +307,15 @@ nav ul {
     background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/horiseon.png");
 }
 /* Run Buddy Styles End */
+.technically {
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/technically.png");
+}
+.grade-gatsby {
+    background-image: linear-gradient(var(--bg-dim), var(--bg-dim)), url("https://davepaulsanders.github.io/Dave-Sanders-Portfolio/assets/grade-gatsby.png");
+}
+
 
 /* Media Queries for Projects */
-
-
-@media screen and (min-width: 800px) {
-    .nba {
-        grid-column: 1 / span 12;
-    }
-    .setlists {
-        grid-column: 1 / span 6;
-    }
-    .run-buddy {
-        grid-column: 7 / span 6;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .project-example {
-        height: 400px;
-    }
-    .setlists {
-        grid-column: 1 / span 4;
-    }
-    .run-buddy {
-        grid-column: 5 / span 4;
-    }
-    .horiseon {
-        grid-column: 9 / span 4; 
-    }
-}
 
 /* Footer Style Start */
 footer {
